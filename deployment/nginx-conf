@@ -1,0 +1,46 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name MY_DOMAIN;
+
+    access_log /var/log/nginx/MY_DOMAIN_access.log;
+    error_log /var/log/nginx/MY_DOMAIN_error.log;
+
+    # redirect all HTTP requests to HTTPS with a 301 Moved Permanently response.
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+
+    server_name MY_DOMAIN;
+
+    access_log /var/log/nginx/MY_DOMAIN_access.log;
+    error_log /var/log/nginx/MY_DOMAIN_error.log;
+
+    # Adjust!
+    ssl_certificate /etc/nginx/certs/MY_DOMAIN/fullchain;
+    ssl_certificate_key /etc/nginx/certs/MY_DOMAIN/key;
+
+    # security configuration
+    # ...
+
+    # compression
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml application/json application/javascript;
+
+    # max upload size 4 MB
+    client_max_body_size 4M;
+
+    # application
+    location / { try_files $uri @myapp; }
+    location @myapp {
+        include uwsgi_params;
+        uwsgi_pass unix:/var/run/uwsgi/app/myapp/socket;
+    }
+}
