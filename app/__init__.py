@@ -99,7 +99,7 @@ from . import util
 
 
 def init_app() -> Flask:
-    """Initialize Shouko."""
+    """Initialize application."""
     app = Flask(__name__)
     app.config.update(BASE_CONFIG)
 
