@@ -1,0 +1,350 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-01-13 12:51+0100\n"
+"PO-Revision-Date: 2021-01-13 12:48+0100\n"
+"Last-Translator: \n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: app/__init__.py:174
+msgid "Please login to continue"
+msgstr "Por favor, inicia sesión para continuar"
+
+#: app/__init__.py:178
+msgid "To protect your account, please reauthenticate to access this page"
+msgstr ""
+"Para proteger tu cuenta, por favor vuelve a autenticarte para acceder a "
+"esta página"
+
+#: app/bootstrap.py:21
+msgid "English"
+msgstr "Inglés"
+
+#: app/bootstrap.py:21
+msgid "Spanish"
+msgstr "Español"
+
+#: app/forms.py:20
+msgid "Username or email"
+msgstr "Nombre de usuario o email"
+
+#: app/forms.py:22
+msgid "Identity is required"
+msgstr "Se requiere una identidad"
+
+#: app/forms.py:27 app/forms.py:54 app/forms.py:98
+msgid "Password"
+msgstr "Contraseña"
+
+#: app/forms.py:29 app/forms.py:56 app/forms.py:67
+msgid "Password is required"
+msgstr "Se requiere la contraseña"
+
+#: app/forms.py:33
+msgid "Remember me"
+msgstr "Recordarme"
+
+#: app/forms.py:35 app/forms.py:60
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+#: app/forms.py:41 app/forms.py:92 app/forms.py:129
+msgid "Email"
+msgstr "Email"
+
+#: app/forms.py:43 app/forms.py:131
+msgid "Email is required"
+msgstr "Se requiere el email"
+
+#: app/forms.py:44 app/forms.py:132
+msgid "Invalid Email"
+msgstr "Email inválido"
+
+#: app/forms.py:48 app/forms.py:80 app/templates/auth/reset_password.html:5
+#: app/templates/auth/reset_password.html:14
+msgid "Reset password"
+msgstr "Restablecer contraseña"
+
+#: app/forms.py:66
+msgid "New password"
+msgstr "Nueva contraseña"
+
+#: app/forms.py:71
+msgid "Retype new password"
+msgstr "Vuelve a escribir la nueva contraseña"
+
+#: app/forms.py:75 app/forms.py:107
+msgid "Passwords did not match"
+msgstr "Las contraseñas no coinciden"
+
+#: app/forms.py:86
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: app/forms.py:88 app/forms.py:94
+msgid "must be unique"
+msgstr "debe ser único"
+
+#: app/forms.py:103
+msgid "Confirm password"
+msgstr "Confirmar contraseña"
+
+#: app/forms.py:113
+msgid "Locale"
+msgstr "Idioma"
+
+#: app/forms.py:118
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#: app/forms.py:123
+msgid "Submit"
+msgstr "Enviar"
+
+#: app/forms.py:136
+msgid "Send"
+msgstr "Enviar"
+
+#: app/templates/auth/invite.html:9 app/templates/general/home.html:3
+#: app/templates/general/home.html:8 app/templates/general/home.html:14
+#: app/templates/layout.html:61
+msgid "Home"
+msgstr "Inicio"
+
+#: app/templates/layout.html:71
+msgid "Invite user"
+msgstr "Invitar a usuario"
+
+#: app/templates/layout.html:76
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: app/templates/auth/forgot_password.html:5
+#: app/templates/auth/forgot_password.html:14
+msgid "Forgot password"
+msgstr "Contraseña olvidada"
+
+#: app/templates/auth/invite.html:4 app/templates/auth/invite.html:10
+msgid "Send invitation"
+msgstr "Enviar invitación"
+
+#: app/templates/auth/invite.html:18
+msgid "Invite users"
+msgstr "Invitar a usuarios"
+
+#: app/templates/auth/invite.html:19
+#, python-format
+msgid "You currently have %(num)d invitation left"
+msgid_plural "You currently have %(num)d invitations left"
+msgstr[0] "Actualmente tienes %(num)d invitación restante"
+msgstr[1] "Actualmente tienes %(num)d invitaciones restantes"
+
+#: app/templates/auth/invite.html:22
+msgid "Use the form below to specify an email address to send an invitation to"
+msgstr ""
+"Usa el formulario de debajo para especificar una dirección de email al a "
+"que enviar una invitación"
+
+#: app/templates/auth/login.html:5 app/templates/auth/login.html:14
+msgid "Login"
+msgstr "Login"
+
+#: app/templates/auth/login.html:39
+msgid "Forgot your password?"
+msgstr "¿Has olvidado tu contraseña?"
+
+#: app/templates/auth/signup.html:5 app/templates/auth/signup.html:14
+msgid "Signup"
+msgstr "Registro"
+
+#: app/templates/emails/base_message.txt:1
+msgid "Hello,"
+msgstr "Hola,"
+
+#: app/templates/emails/base_message.txt:6
+#, python-format
+msgid "The %(site)s team."
+msgstr "El equipo de %(site)s."
+
+#: app/templates/emails/auth/forgot_password.txt:4
+msgid "We have received a password reset request for your account."
+msgstr "Hemos recibido una solicitud para restablecer la contraseña de tu cuenta."
+
+#: app/templates/emails/auth/forgot_password.txt:6
+msgid "If you initiated this request, please click on the link below:"
+msgstr ""
+"Si has iniciado esta solicitud, por favor haz click en el siguiente "
+"enlace:"
+
+#: app/templates/emails/auth/forgot_password.txt:9
+msgid ""
+"If you did not initiate this password reset, you may safely ignore this "
+"email."
+msgstr ""
+"Si no has iniciado este proceso de restauración, puedes ignorar este "
+"correo."
+
+#: app/templates/emails/auth/invite.txt:4
+#, python-format
+msgid "You have been invited by %(user)s to participate in %(site)s!"
+msgstr "¡Has recibido una invitación de %(user)s para participar en %(site)s!"
+
+#: app/templates/emails/auth/invite.txt:6
+msgid "Please click on the link below to create an account:"
+msgstr "Por favor, haz click en el siguiente enlace para crear una cuenta:"
+
+#: app/templates/emails/auth/invite.txt:9
+#, python-format
+msgid "Note that this invitation will expire on %(date)s"
+msgstr "Ten en cuenta que esta invitación caducará el %(date)s"
+
+#: app/templates/emails/auth/reset_password.txt:4
+msgid "Your password has been reset."
+msgstr "Tu contraseña ha sido restablecida."
+
+#: app/templates/emails/auth/reset_password.txt:6
+msgid ""
+"If you did not initiate this password reset, please reset your password "
+"now."
+msgstr ""
+"Si no has iniciado este restablecimiento de contraseña, por favor "
+"restablece la contraseña de inmediato."
+
+#: app/templates/errors/403.html:3
+msgid "Forbidden"
+msgstr "Prohibido"
+
+#: app/templates/errors/403.html:9
+msgid "Access forbidden"
+msgstr "Acceso prohibido"
+
+#: app/templates/errors/403.html:12
+msgid "You don't have the required permissions to access this page"
+msgstr "No tienes los permisos necesarios para acceder a esta página"
+
+#: app/templates/errors/404.html:3 app/templates/errors/404.html:9
+msgid "Not found"
+msgstr "No encontrado"
+
+#: app/templates/errors/404.html:12
+msgid ""
+"The page you were looking for was not found or you don't have the "
+"required permissions to access it"
+msgstr ""
+"La página que estabas buscando no se encuentra o no tienes los permisos "
+"necesarios para acceder a ella"
+
+#: app/templates/errors/500.html:3 app/templates/errors/500.html:9
+msgid "Server error"
+msgstr "Error interno del servidor"
+
+#: app/templates/errors/500.html:12
+msgid ""
+"A server error occured while processing your request. Please contact an "
+"administrator"
+msgstr ""
+"Ha ocurrido un error del servidor mientras se procesaba tu solicitud. Por"
+" favor, contacta con un administrador"
+
+#: app/templates/general/home.html:16
+#, python-format
+msgid "Hello %(user)s, you are authenticated!"
+msgstr "Hola %(user)s, ¡estás autenticado!"
+
+#: app/templates/general/partials/modal_error.html:10
+msgid "Error"
+msgstr "Error"
+
+#: app/templates/general/partials/modal_error.html:17
+msgid "Close"
+msgstr "Cerrar"
+
+#: app/templates/macros/general.html:45
+msgid "Previous"
+msgstr "Anterior"
+
+#: app/templates/macros/general.html:49
+msgid "Next"
+msgstr "Siguiente"
+
+#: app/views/auth.py:44 app/views/auth.py:61 app/views/auth.py:93
+msgid "Invalid credentials"
+msgstr "Credenciales no válidas"
+
+#: app/views/auth.py:50
+msgid "Logged in successfully"
+msgstr "Acceso correcto"
+
+#: app/views/auth.py:84
+msgid "User is not active"
+msgstr "El usuario no está activo"
+
+#: app/views/auth.py:133 app/views/auth.py:156 app/views/auth.py:166
+msgid "A password reset token has been sent"
+msgstr "Se ha enviado un token de restauración de contraseña"
+
+#: app/views/auth.py:148
+msgid "Password reset"
+msgstr "Restauración de contraseña"
+
+#: app/views/auth.py:197
+msgid "Invalid password reset token provided"
+msgstr "Token de restauración de contraseña no válido"
+
+#: app/views/auth.py:216
+msgid "Password reset notification"
+msgstr "Notificación de restauración de contraseña"
+
+#: app/views/auth.py:221
+msgid "Password updated, you may now login"
+msgstr "Contraseña actualizada, ahora puedes iniciar sesión"
+
+#: app/views/auth.py:228
+msgid "Error updating password, contact an admin"
+msgstr "Error al actualizar la contraseña, contacta con un administrador"
+
+#: app/views/auth.py:250
+msgid "You have no invitations left"
+msgstr "No te quedan invitaciones"
+
+#: app/views/auth.py:278
+#, python-format
+msgid "%(site)s invitation"
+msgstr "Invitación de %(site)s"
+
+#: app/views/auth.py:289
+msgid "Invitation sent!"
+msgstr "¡Invitación enviada!"
+
+#: app/views/auth.py:297
+msgid "Failed to create or send invitation"
+msgstr "Fallo al crear o enviar la invitación"
+
+#: app/views/auth.py:326
+msgid "Token is not valid"
+msgstr "El token no es válido"
+
+#: app/views/auth.py:344
+msgid "User created correctly, please login"
+msgstr "Usuario creado correctamente, por favor inicia sesión"
+
+#: app/views/auth.py:352
+msgid "A user with those details already exists"
+msgstr "Ya existe un usuario con esa información"
+
+#: app/views/auth.py:358
+msgid "Failed to create user"
+msgstr "Fallo al crear el usuario"
+

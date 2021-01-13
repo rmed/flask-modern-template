@@ -1,0 +1,20 @@
+{# Partial view that shows an error message when an error was encountered loading a modal template #}
+{# This partial is copied to a '.modal' container when needed #}
+<div id="error-modal" class="modal-card">
+    <header class="modal-card-head">
+        <p class="modal-card-title">{{ title }}</p>
+        <button class="delete" aria-label="close"></button>
+    </header>
+
+    <section class="modal-card-body">
+        <h3 class="subtitle is-3">{{ _('Error') }}</h3>
+        <h4 class="subtitle is-4">{{ description }}</h4>
+    </section>
+
+    <footer class="modal-card-foot">
+        <button class="button cancel-action">
+            <span class="icon"><i class="fas fa-times"></i></span>
+            <span>{{ _('Close') }}</span>
+        </button>
+    </footer>
+</div>

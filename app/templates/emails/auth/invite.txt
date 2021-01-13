@@ -1,0 +1,10 @@
+{% extends 'emails/base_message.txt' %}
+
+{% block message %}
+{{ _('You have been invited by %(user)s to participate in %(site)s!', user=user.username, site=config['SITENAME']) }}
+
+{{ _('Please click on the link below to create an account:') }}
+    {{ url_for('auth.signup', _external=True, token=invitation.token) }}
+
+{{ _('Note that this invitation will expire on %(date)s', date=invitation.expiration|datetime) }}
+{% endblock %}

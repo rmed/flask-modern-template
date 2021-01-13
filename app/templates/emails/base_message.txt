@@ -1,0 +1,6 @@
+{{ _('Hello,') }}
+
+{% block message %}
+{% endblock %}
+
+{{ _('The %(site)s team.', site=config['SITENAME']) }}

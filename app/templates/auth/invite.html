@@ -1,0 +1,35 @@
+{% import "macros/form.html" as form_macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _('Send invitation') }}{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+        <li><a href="{{ url_for('general.home') }}">{{ _('Home') }}</a></li>
+        <li class="is-active"><a href="#" aria-current="page">{{ _('Send invitation') }}</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+    {# Password #}
+    <div class="box">
+        <h3 class="subtitle is-3">{{ _('Invite users') }}</h3>
+        <h5 class="subtitle is-5">{{ ngettext('You currently have %(num)d invitation left', 'You currently have %(num)d invitations left', current_user.invitations) }}</h5>
+
+        {%- if current_user.invitations > 0 %}
+            <p>{{ _('Use the form below to specify an email address to send an invitation to') }}</p>
+            <form action="" method="POST" role="form">
+                {{ form.hidden_tag() }}
+
+                {# Email #}
+                {{ form_macros.render_input(form.email, icon="envelope") }}
+                {{ form_macros.render_messages(form.errors.email) }}
+
+                {# Submit #}
+                {{ form_macros.render_submit(form.submit, icon="check", fullwidth=false) }}
+            </form>
+        {%- endif %}
+    </div>
+{% endblock %}

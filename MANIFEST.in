@@ -1,0 +1,10 @@
+recursive-include app/migrations *
+recursive-include app/templates *
+recursive-include app/translations *
+recursive-include app/static/dist *
+
+recursive-exclude * __pycache__
+recursive-exclude * *.swp
+recursive-exclude * *.py[co]
+recursive-exclude * *.orig
+recursive-exclude tests *

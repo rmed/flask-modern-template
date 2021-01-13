@@ -1,0 +1,18 @@
+// Customizations
+
+// Bulma
+@import "./node_modules/bulma/bulma.sass";
+
+// Bulma extensions
+@import "./node_modules/bulma-switch/src/sass/index.sass";
+@import "./node_modules/@creativebulma/bulma-divider/src/sass/index.sass";
+
+// Noty
+@import "./node_modules/noty/lib/noty";
+@import "./node_modules/noty/lib/themes/mint";
+
+
+html, body {
+    background-color: #fafafa;
+    height: 100%;
+}

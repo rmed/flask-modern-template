@@ -1,0 +1,71 @@
+{# Render flash messages #}
+{%- macro render_flash_messages() %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <script type="text/javascript">
+                {% for category, message in messages %}
+                    showNotification('{{ category }}', '{{ message }}');
+                {% endfor %}
+            </script>
+        {% endif %}
+    {% endwith %}
+{%- endmacro %}
+
+
+{# Show a truncated version of a string if it is longer than the threshold #}
+{%- macro truncate_string(string, threshold=50) %}
+    {%- if string|length > 50 %}
+        {{ string[:50] + '...' }}
+    {%- else %}
+        {{ string }}
+    {%- endif %}
+{%- endmacro %}
+
+
+{# Renders pagination controls
+
+Use the `params` argument to include additional query arguments in the links. For instance:
+
+    {{ render_pagination(pagination, params={'arg1': '1', 'arg2': '2'}) }}
+
+When using arguments of the current page:
+
+    {{ render_pagination(pagination, params=request.args.copy()) }}
+#}
+{%- macro render_pagination(pagination, params={}) %}
+{# Remove special argument page from the parameters #}
+{% if 'page' in params %}
+    {% set _d = params.pop('page') %}
+{% endif %}
+
+    <div class="box">
+        <nav class="pagination" role="navigation" aria-label="pagination" data-target="{{ target }}">
+            <a {% if pagination.has_prev %}href="{{ url_for_self(page=pagination.page-1, **params) }}"{% else %}disabled{% endif %} class="pagination-previous">
+                <span class="icon"><i class="fas fa-chevron-left"></i></span>
+                <span>{{ _('Previous') }}</span>
+            </a>
+
+            <a {% if pagination.has_next %}href="{{ url_for_self(page=pagination.page+1, **params) }}"{% else %}disabled{% endif %} class="pagination-next">
+                <span>{{ _('Next') }}</span>
+                <span class="icon"><i class="fas fa-chevron-right"></i></span>
+            </a>
+
+            <ul class="pagination-list">
+                {% for page in pagination.iter_pages() %}
+                    <li>
+                        {% if page %}
+                            {% if page != pagination.page %}
+                                <a href="{{ url_for_self(page=page, **params) }}"class="pagination-link">{{ page }}</a>
+                            {% else %}
+                                <a class="pagination-link is-current">{{ page }}</a>
+                            {% endif %}
+
+                        {% else %}
+                            <span class="pagination-ellipsis">&hellip;</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+{%- endmacro %}

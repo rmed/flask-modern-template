@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ _('Not found') }}{% endblock %}
+
+{% block content %}
+    <div class="has-text-centered mt-5">
+        <h1 class="subtitle is-1 has-text-grey">
+            <span class="icon"><i class="fas fa-search"></i></span>
+            <span>{{ _('Not found') }}</span>
+        </h1>
+    </div>
+    <p class="mt-5 has-text-centered is-size-4">{{ _('The page you were looking for was not found or you don\'t have the required permissions to access it') }}</p>
+{% endblock %}

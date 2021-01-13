@@ -1,0 +1,55 @@
+{% import "macros/general.html" as macros %}
+{% import "macros/form.html" as form_macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _('Signup') }}{% endblock %}
+
+{% block html_body %}
+<body>
+    <section class="hero is-light is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <div class="column is-4 is-offset-4">
+                    <h2 class="title is-2 has-text-grey has-text-centered"><a href="{{ url_for('auth.login') }}">{{ config['SITENAME'] }}</a></h2>
+                    <h3 class="subtitle is-3 has-text-grey has-text-centered">{{ _('Signup') }}</h3>
+
+                    {{ macros.render_flash_messages() }}
+
+                    <div class="box">
+                        <form action="" method="POST" role="form">
+                            {{ form.hidden_tag() }}
+
+                            {# Username #}
+                            {{ form_macros.render_input(form.username, icon='user') }}
+                            {{ form_macros.render_messages(form.errors.username) }}
+
+                            {# Email #}
+                            {{ form_macros.render_input(form.email, icon='envelope') }}
+                            {{ form_macros.render_messages(form.errors.email) }}
+
+                            {# Password #}
+                            {{ form_macros.render_input(form.plain_password, icon='key') }}
+                            {{ form_macros.render_messages(form.errors.plain_password) }}
+
+                            {# Confirm password #}
+                            {{ form_macros.render_input(form.confirm_password, icon='key') }}
+                            {{ form_macros.render_messages(form.errors.confirm_password) }}
+
+                            {# Locale #}
+                            {{ form_macros.render_select(form.locale, icon="language") }}
+                            {{ form_macros.render_messages(form.errors.locale) }}
+
+                            {# Timezone #}
+                            {{ form_macros.render_select(form.timezone, icon="globe") }}
+                            {{ form_macros.render_messages(form.errors.timezone) }}
+
+                            {# Submit #}
+                            {{ form_macros.render_submit(form.submit) }}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock %}
