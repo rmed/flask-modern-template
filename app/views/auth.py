@@ -215,7 +215,7 @@ def reset_password(token):
             send_email(
                 _('Password reset notification'),
                 recipients=[user.email],
-                body=render_template('email/auth/password_changed.txt')
+                body=render_template('email/auth/reset_password.txt')
             )
 
             flash(_('Password updated, you may now login'), 'success')
