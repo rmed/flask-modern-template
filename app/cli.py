@@ -10,12 +10,7 @@ from . import db, crypto_manager, init_app
 from .models import User
 
 
-def init_wrapper(info):
-    """Wrapper for the application initialization function."""
-    return init_app()
-
-
-@click.group(cls=FlaskGroup, create_app=init_wrapper)
+@click.group(cls=FlaskGroup, create_app=init_app)
 def cli():
     """App CLI."""
     pass
